@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famous Beauty Salon | Premium Hair & Beauty Services</title>
+    <style>
+        :root {
+            --primary: #d4af37; /* Premium Gold */
+            --dark: #111111;
+            --light: #fafafa;
+            --gray: #666666;
+            --whatsapp: #25D366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--dark);
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .cta-btn {
+            background-color: var(--whatsapp);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.2s;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://unsplash.com') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .services {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .services h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary);
+            margin: 10px auto 0;
+        }
+
+        .menu-category {
+            margin-bottom: 3rem;
+        }
+
+        .category-title {
+            color: var(--primary);
+            font-size: 1.4rem;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+        }
+
+        .item-name {
+            font-weight: 600;
+        }
+
+        .item-price {
+            font-weight: bold;
+            color: var(--dark);
+        }
+
+        .info-section {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .info-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 15fr));
+            gap: 2rem;
+        }
+
+        .info-box h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: #000;
+            color: var(--gray);
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">FAMOUS <span>BEAUTY SALON</span></div>
+        <a href="https://wa.me." class="cta-btn" target="_blank">
+            💬 Book via WhatsApp
+        </a>
+    </header>
+
+    <section class="hero">
+        <h1>Look Good. Feel <span>Famous</span>.</h1>
+        <p>Your premium destination for expert hair styling, flawless beauty care, and absolute relaxation.</p>
+        <a href="https://wa.me." class="cta-btn" target="_blank">
+            ✨ Book Your Session Now
+        </a>
+    </section>
+
+    <section class="services">
+        <h2>Our Menu & Pricing</h2>
+
+        <!-- Hair Category -->
+        <div class="menu-category">
+            <div class="category-title">Hair & Styling</div>
+            <div class="menu-item">
+                <span class="item-name">Wash, Cut & Blow Wave</span>
+                <span class="item-price">from R250</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Full Head Highlights</span>
+                <span class="item-price">from R650</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Premium Hair Braiding / Weaves</span>
+                <span class="item-price">from R400</span>
+            </div>
+        </div>
+
+        <!-- Nails & Beauty -->
+        <div class="menu-category">
+            <div class="category-title">Nails & Aesthetics</div>
+            <div class="menu-item">
+                <span class="item-name">Gel Overlay (Hands or Feet)</span>
+                <span class="item-price">R180</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Full Acrylic Set</span>
+                <span class="item-price">R280</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Eyebrow Wax & Tint</span>
+                <span class="item-price">R120</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="info-grid">
+            <div class="info-box">
+                <h3>Opening Hours</h3>
+                <p>Mon - Sat: 08:30 - 17:30</p>
+                <p>Sundays: Closed</p>
+            </div>
+            <div class="info-box">
+                <h3>Our Location</h3>
+                <p>Berea, Durban</p>
+                <p>South Africa</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Famous Beauty Salon. All Rights Reserved. Designed to grow your business.</p>
+    </footer>
+
+</body>
+</html>
+import os
+
+# Define the root project folder name
+project_name = "famous-salon-website"
+
+# Define the subfolder structure
+folders = [
+    project_name,
+    os.path.join(project_name, "assets"),
+    os.path.join(project_name, "assets", "css"),
+    os.path.join(project_name, "assets", "images"),
+    os.path.join(project_name, "assets", "js")
+]
+
+# Create directories
+for folder in folders:
+    os.makedirs(folder, exist_ok=True)
+    print(f"Created folder: {folder}")
+
+# Main HTML Website Code content
+html_content = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famous Beauty Salon | Premium Hair & Beauty Services</title>
+    <style>
+        :root {
+            --primary: #d4af37; /* Premium Gold */
+            --dark: #111111;
+            --light: #fafafa;
+            --gray: #666666;
+            --whatsapp: #25D366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--dark);
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .cta-btn {
+            background-color: var(--whatsapp);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.2s;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://unsplash.com') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .services {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .services h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary);
+            margin: 10px auto 0;
+        }
+
+        .menu-category {
+            margin-bottom: 3rem;
+        }
+
+        .category-title {
+            color: var(--primary);
+            font-size: 1.4rem;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+        }
+
+        .item-name {
+            font-weight: 600;
+        }
+
+        .item-price {
+            font-weight: bold;
+            color: var(--dark);
+        }
+
+        .info-section {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .info-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .info-box h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: #000;
+            color: var(--gray);
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">FAMOUS <span>BEAUTY SALON</span></div>
+        <a href="https://wa.me." class="cta-btn" target="_blank">
+            💬 Book via WhatsApp
+        </a>
+    </header>
+
+    <section class="hero">
+        <h1>Look Good. Feel <span>Famous</span>.</h1>
+        <p>Your premium destination for expert hair styling, flawless beauty care, and absolute relaxation.</p>
+        <a href="https://wa.me." class="cta-btn" target="_blank">
+            ✨ Book Your Session Now
+        </a>
+    </section>
+
+    <section class="services">
+        <h2>Our Menu & Pricing</h2>
+
+        <!-- Hair Category -->
+        <div class="menu-category">
+            <div class="category-title">Hair & Styling</div>
+            <div class="menu-item">
+                <span class="item-name">Wash, Cut & Blow Wave</span>
+                <span class="item-price">from R250</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Full Head Highlights</span>
+                <span class="item-price">from R650</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Premium Hair Braiding / Weaves</span>
+                <span class="item-price">from R400</span>
+            </div>
+        </div>
+
+        <!-- Nails & Beauty -->
+        <div class="menu-category">
+            <div class="category-title">Nails & Aesthetics</div>
+            <div class="menu-item">
+                <span class="item-name">Gel Overlay (Hands or Feet)</span>
+                <span class="item-price">R180</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Full Acrylic Set</span>
+                <span class="item-price">R280</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Eyebrow Wax & Tint</span>
+                <span class="item-price">R120</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="info-grid">
+            <div class="info-box">
+                <h3>Opening Hours</h3>
+                <p>Mon - Sat: 08:30 - 17:30</p>
+                <p>Sundays: Closed</p>
+            </div>
+            <div class="info-box">
+                <h3>Our Location</h3>
+                <p>Berea, Durban</p>
+                <p>South Africa</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Famous Beauty Salon. All Rights Reserved. Designed to grow your business.</p>
+    </footer>
+
+</body>
+</html>"""
+
+# Write the index.html file into the folder
+with open(os.path.join(project_name, "index.html"), "w", encoding="utf-8") as f:
+    f.write(html_content)
+print("Created file: index.html inside root directory.")
+
+# Create a functional README markdown file for deployment reference
+readme_content = f"""# Famous Beauty Salon Website
+
+A high-converting, single-page web solution built for **Famous Beauty Salon** in Berea, South Africa.
+
+## 📂 Project Structure Overview
+* `index.html` - Primary codebase containing all content, layout grids, and premium branding styles.
+* `assets/images/` - Empty directory designated for local images or gallery updates.
+* `assets/css/` - Place any future external sheets here.
+
+## 🚀 Instant Deployment Guide
+1. Push this entire folder to a public **GitHub Repository**.
+2. Go to **Settings -> Pages** on GitHub.
+3. Select the `main` branch and hit **Save**.
+4. Your website link goes live in minutes!
+"""
+
+with open(os.path.join(project_name, "README.md"), "w", encoding="utf-8") as f:
+    f.write(readme_content)
+print("Created file: README.md inside root directory.")
+famous-salon-website/
+├── index.html          <-- (Contains the complete layout and styling code)
+├── README.md           <-- (Project notes and deployment setup manual)
+└── assets/
+    ├── css/            <-- (For separate stylesheets if expanded later)
+    ├── images/         <-- (Drop business photos/logos here)
+    └── js/             <-- (For interactive features or scripts)
